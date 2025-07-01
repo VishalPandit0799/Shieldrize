@@ -2,15 +2,15 @@ import React from 'react';
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
-      <div className="container">
-        
+    <nav className="navbar navbar-expand-lg bg-white border-bottom sticky-top shadow-sm py-2">
+      <div className="container-fluid px-4">
+
         {/* Logo */}
-        <a className="navbar-brand fw-bold fs-3 text-white" href="#">
+        <a className="navbar-brand fw-bold fs-3 text-dark" href="#">
           <span className="text-primary">Shield</span>rize
         </a>
 
-        {/* Toggler for Mobile */}
+        {/* Mobile Toggle */}
         <button
           className="navbar-toggler"
           type="button"
@@ -24,17 +24,17 @@ const Navbar = () => {
         </button>
 
         {/* Navbar Content */}
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-4 me-auto">
+        <div className="collapse navbar-collapse justify-content-between" id="navbarNav">
+          <ul className="navbar-nav gap-3 ms-lg-4">
             <li className="nav-item">
-              <a className="nav-link active fw-medium" href="#">Home</a>
+              <a className="nav-link fw-semibold text-dark" href="#">Home</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link fw-medium" href="#">Courses</a>
+              <a className="nav-link fw-semibold text-dark" href="#">Courses</a>
             </li>
             <li className="nav-item dropdown">
               <a
-                className="nav-link dropdown-toggle fw-medium"
+                className="nav-link dropdown-toggle fw-semibold text-dark"
                 href="#"
                 id="categoryDropdown"
                 role="button"
@@ -52,28 +52,33 @@ const Navbar = () => {
               </ul>
             </li>
             <li className="nav-item">
-              <a className="nav-link fw-medium" href="#">About</a>
+              <a className="nav-link fw-semibold text-dark" href="#">About</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link fw-medium" href="#">Contact</a>
+              <a className="nav-link fw-semibold text-dark" href="#">Contact</a>
             </li>
           </ul>
 
-          {/* Search Bar */}
-          <form className="d-none d-lg-flex me-3" role="search">
-            <input
-              type="search"
-              className="form-control rounded-pill px-3"
-              placeholder="Search courses..."
-              aria-label="Search"
-              style={{ minWidth: '220px' }}
-            />
-          </form>
-
           {/* Auth Buttons */}
-          <div className="d-flex gap-2">
-            <a href="#" className="btn btn-outline-light rounded-pill px-4">Sign In</a>
-            <a href="#" className="btn btn-primary rounded-pill px-4 shadow">Sign Up</a>
+          <div className="d-flex flex-column flex-lg-row align-items-start align-items-lg-center gap-2 mt-3 mt-lg-0">
+            <a
+              href="#"
+              className="btn btn-light px-4 py-2 rounded-3 border border-dark-subtle shadow-sm text-dark fw-medium"
+              style={{ transition: 'all 0.2s ease-in-out' }}
+              onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)'}
+              onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 2px 6px rgba(0, 0, 0, 0.05)'}
+            >
+              Sign In
+            </a>
+            <a
+              href="#"
+              className="btn btn-dark px-4 py-2 rounded-3 fw-medium"
+              style={{ transition: 'all 0.2s ease-in-out' }}
+              onMouseEnter={(e) => e.currentTarget.style.opacity = '0.85'}
+              onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
+            >
+              Sign Up
+            </a>
           </div>
         </div>
       </div>
