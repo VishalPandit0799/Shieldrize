@@ -35,13 +35,13 @@ const CoursesSection = () => {
   ];
 
   return (
-    <section className="py-5 bg-white" id="courses">
+    <section className="py-5 bg-dark text-light" id="courses">
       <div className="container">
-        <h2 className="text-center mb-5 fw-bold">Our Top Courses</h2>
+        <h2 className="text-center mb-5 fw-bold">Top Courses</h2>
         <div className="row g-4">
           {courses.map((course, index) => (
             <div className="col-md-4" key={index}>
-              <div className="card h-100 shadow-sm border-0">
+              <div className="card h-100 shadow-sm border-0 bg-dark text-light">
                 <img
                   src={course.image}
                   alt={course.title}
@@ -50,7 +50,7 @@ const CoursesSection = () => {
                 />
                 <div className="card-body">
                   <h5 className="card-title fw-semibold">{course.title}</h5>
-                  <p className="card-text text-muted">{course.description}</p>
+                  <p className="card-text text-light">{course.description}</p>
                 </div>
                 <div className="card-footer bg-transparent border-0">
                   <a href="#" className="btn btn-outline-primary w-100 rounded-pill">
